@@ -15,7 +15,7 @@ while (1) {
 function send_mail($job) {
     $workload = $job->workload();
     $data = json_decode($workload, true);
-    //send email
+    //отправка письма, используя любой удобный способ. Например, отправка письма непосредственно сервером, без сервисов рассылки или SMTP
     //mail($data['credential'], $data['notification']['subject'], $data['notification']['body']);
     $fh = fopen('test.html', 'a'); //log
     fwrite($fh, implode(', ', $data['user']).'<br>');
